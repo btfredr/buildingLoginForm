@@ -1,4 +1,5 @@
 import { displayMessage } from "./components/common/displayMessage.js";
+import { saveToken, saveUser } from "./utils/storage.js";
 import { baseUrl } from "./settings/api.js";
 
 const form = document.querySelector("form");
