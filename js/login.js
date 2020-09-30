@@ -41,6 +41,9 @@ function submitForm(event) {
 
             if (json.user) {
                 displayMessage("success", "Successfully logged in", ".message-container");
+
+                saveToken(json.jwt);
+                saveUser(json.user);
             }
             if (json.error) {
                 displayMessage("warning", "invalid login details", ".message-container");
