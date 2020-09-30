@@ -37,6 +37,13 @@ function submitForm(event) {
             const response = await fetch(url, options);
             const json = response.json();
             console.log(json);
+
+            if (json.user) {
+                displayMessage("success", "Successfully logged in", ".message-container");
+            }
+            if (json.error) {
+                displayMessage("warning", "invalid login details", ".message-container");
+            }
         }
         catch (error) {
             console.log(error);
